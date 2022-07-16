@@ -58,3 +58,15 @@ C:\343 G.S\Nueva carpeta\Proyecto Domino\Engine\obj\Debug\net6.0\Engine.Csproj.C
 C:\343 G.S\Nueva carpeta\Proyecto Domino\Engine\obj\Debug\net6.0\Engine.dll
 C:\343 G.S\Nueva carpeta\Proyecto Domino\Engine\obj\Debug\net6.0\ref\Engine.dll
 C:\343 G.S\Nueva carpeta\Proyecto Domino\Engine\obj\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\bin\Debug\net6.0\Engine.deps.json
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\bin\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\bin\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.Csproj.AssemblyReference.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.AssemblyInfoInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.AssemblyInfo.cs
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.Csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\refint\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\ref\Engine.dll

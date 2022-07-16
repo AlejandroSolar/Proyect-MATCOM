@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj": {}
+    "C:\\Users\\Alejandro\\Desktop\\Proyecto 2doSemestre\\Proyect-MATCOM\\Engine\\Engine.Csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj": {
+    "C:\\Users\\Alejandro\\Desktop\\Proyecto 2doSemestre\\Proyect-MATCOM\\Engine\\Engine.Csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj",
+        "projectUniqueName": "C:\\Users\\Alejandro\\Desktop\\Proyecto 2doSemestre\\Proyect-MATCOM\\Engine\\Engine.Csproj",
         "projectName": "Engine",
-        "projectPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj",
+        "projectPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto 2doSemestre\\Proyect-MATCOM\\Engine\\Engine.Csproj",
         "packagesPath": "C:\\Users\\Alejandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\obj\\",
+        "outputPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto 2doSemestre\\Proyect-MATCOM\\Engine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alejandro\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -5,7 +5,7 @@ Console.ForegroundColor = ConsoleColor.White;
 Console.Title = "Domino Alejan2";
 Console.Clear();
 
-// lista de opciones dadas al usuario en una primara fase del proograma
+// lista de opciones dadas al usuario en una primara fase del programa
 List<string> Options = new List<string>
 {
     "Nueva Partida",
