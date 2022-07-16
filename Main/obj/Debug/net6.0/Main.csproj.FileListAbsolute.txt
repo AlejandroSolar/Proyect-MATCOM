@@ -52,3 +52,39 @@ E:\Proyecto Domino\Main\obj\Debug\net6.0\refint\Main.dll
 E:\Proyecto Domino\Main\obj\Debug\net6.0\Main.pdb
 E:\Proyecto Domino\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
 E:\Proyecto Domino\Main\obj\Debug\net6.0\ref\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\bin\Debug\net6.0\Main.exe
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\bin\Debug\net6.0\Main.deps.json
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\bin\Debug\net6.0\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\bin\Debug\net6.0\Main.pdb
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\bin\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\bin\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.csproj.CopyComplete
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\refint\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.pdb
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+C:\Users\Alejandro\Desktop\Proyecto domino\Proyecto Domino\Main\obj\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\Main.exe
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\Main.deps.json
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\Main.dll
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\Main.pdb
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\Engine.dll
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\bin\Debug\net6.0\Engine.pdb
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.csproj.CopyComplete
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.dll
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.pdb
+C:\343 G.S\Nueva carpeta\Proyecto Domino\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache

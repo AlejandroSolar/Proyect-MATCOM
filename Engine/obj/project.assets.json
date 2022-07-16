@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Engine\\Engine.Csproj",
+      "projectUniqueName": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj",
       "projectName": "Engine",
-      "projectPath": "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Engine\\Engine.Csproj",
+      "projectPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj",
       "packagesPath": "C:\\Users\\Alejandro\\.nuget\\packages\\",
-      "outputPath": "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Engine\\obj\\",
+      "outputPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alejandro\\AppData\\Roaming\\NuGet\\NuGet.Config"

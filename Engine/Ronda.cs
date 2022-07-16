@@ -1,184 +1,137 @@
-namespace Engine;
-
-public static class Ronda
+namespace Engine
 {
-    public static bool Run(List<Player> players, List<IValid> reglas, List<IStopCondition> conditions, List<Ficha> mesa, bool magic)
+    // entidad encargada de controlar un turno de cada jugador actual en el juego (una vuelta a la)
+    public static class Ronda
     {
-        for (int i = 0; i < players.Count; i++)
+        // comienza la ronda
+        public static bool Run
+            (
+            List<Player> players,
+            List<IValid> reglas,
+            List<IStopCondition> conditions,
+            Board mesa,
+            Register registro,
+            List<Pareja> parejas
+            )
         {
-            Console.Clear();
-            Console.WriteLine($"Es el turno de {players[i].Nombre}:");
-            Console.WriteLine();
-            players[i].PrintHand();
-            Console.WriteLine();
-            printMesa(mesa);
-            Console.WriteLine();
-
-            for (int j = 0; j < conditions.Count; j++)
+            for (int i = 0; i < players.Count; i++)
             {
-                if (conditions[j].Stop(players, mesa, reglas))
+                // muestra en pantalla el estado actual del juego
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"Es el turno de {players[i].Nombre}:");
+                Console.ResetColor();
+                Console.WriteLine();
+                Console.WriteLine("Tú Mano:");
+                players[i].PrintHand();
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Mesa:");
+                System.Console.WriteLine(mesa.ToString());
+                Console.WriteLine();
+
+                // detiene la ronda si alguna condición de parada se cumple
+                for (int j = 0; j < conditions.Count; j++)
+                {
+                    if (conditions[j].Stop(Auxiliar.ClonePlayers(players), mesa.Clone(), new List<IValid>(reglas)))
+                    {
+                        return true;
+                    }
+
+                }
+
+                // alerta al jugador de que se pasó 
+                if (Pasate(players[i], reglas, mesa))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("No puedes jugar");
+                    Console.ResetColor();
+                    Console.ReadLine();
+
+                    // actualiza el registro con el turno fallido del jugador
+                    registro.Add(new Evento(players[i].Nombre, null!, false));
+                    continue;
+                }
+
+
+                Jugada jugada = players[i].Play(mesa.Clone(), new List<IValid>(reglas), registro.Clone(), new List<Pareja>(parejas));
+
+                bool Posición = CheckPosition(jugada, reglas, mesa);
+
+                // si no se puede jugar la ficha seleccionada por el jugador 
+                // no permite jugarla y vuelve a empezar su turno hasta que 
+                // seleccione una ficha correcta o se pase
+                if (!Posición)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Jugada no valida");
+                    Thread.Sleep(500);
+                    Console.ResetColor();
+                    i -= 1;
+                    continue;
+                }
+
+                // finalmente juega la ficha
+                Play(players[i], jugada, mesa);
+
+                // actualiza el registro
+                registro.Add(new Evento(players[i].Nombre, jugada.Ficha, jugada.Posición));
+                registro.PrintActual();
+
+
+                Console.ReadLine();
+            }
+            return false;
+        }
+
+        // verifica si el jugador puede jugar al menos una ficha y si no automaticamente pasa el turno al siguiente
+        public static bool Pasate(Player player, List<IValid> reglas, Board mesa)
+        {
+            List<Jugada> posibles = Auxiliar.LlenarPosibles(player.Mano, reglas, mesa);
+
+            if (posibles.Count == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        // recibe la jugada que selecciona el jugador, verifica si es posible jugarla y la juega
+        private static void Play(Player player, Jugada jugada, Board Mesa)
+        {
+            if (!jugada.Posición)
+            {
+                if (jugada.Girada)
+                {
+                    jugada.Ficha.Turn();
+                }
+                Mesa.PreAdd(jugada.Ficha);
+            }
+
+            else
+            {
+                if (jugada.Girada)
+                {
+                    jugada.Ficha.Turn();
+                }
+                Mesa.Add(jugada.Ficha);
+            }
+
+            player.Mano.Remove(jugada.Ficha);
+        }
+
+        // verifica si la jugada seleccionada por el jugador es valida para al menos una de las posibles reglas
+        private static bool CheckPosition(Jugada jugada, List<IValid> reglas, Board mesa)
+        {
+            for (int i = 0; i < reglas.Count; i++)
+            {
+                if (reglas[i].Valid(jugada, mesa))
                 {
                     return true;
                 }
-
             }
-
-            if (Pasate(players[i], reglas, mesa))
-            {
-                Console.WriteLine("No puedes jugar");
-                Thread.Sleep(1000);
-                continue;
-            }
-
-            Ficha f = players[i].Play(mesa,reglas);
-            Play(players[i],f,mesa,reglas);
-
-            if (magic)
-            {
-                checkMagic(mesa);
-            }
-            Thread.Sleep(1000);
+            return false;
         }
-        return false;
 
     }
-
-    public static void printMesa(List<Ficha> Mesa)
-    {
-        for (int i = 0; i < Mesa.Count; i++)
-        {
-            Console.Write($"-{Mesa[i]}-");
-        }
-    }
-
-    public static bool Pasate(Player player, List<IValid> reglas, List<Ficha> mesa)
-    {
-        foreach (var cosa in player.Mano)
-        {
-            foreach (var item in reglas)
-            {
-                if (item.Valid(cosa, mesa) != -1)
-                {
-                    return false;
-                }
-            }
-
-        }
-        return true;
-    }
-
-    public static void checkMagic(List<Ficha> Mesa)
-    {
-        for (int i = 0; i < Mesa.Count; i++)
-        {
-            if (Mesa[i].PartIzq == -1 && Mesa[i].PartDch == -1)
-            {
-                if (Auxiliar.Validpos(i + 1, Mesa))
-                {
-                    Mesa[i].PartDch = Mesa[i + 1].PartIzq;
-                    Mesa[i].PartIzq = Mesa[i + 1].PartIzq;
-                }
-
-                else if (Auxiliar.Validpos(i - 1, Mesa))
-                {
-                    Mesa[i].PartDch = Mesa[i - 1].PartDch;
-                    Mesa[i].PartIzq = Mesa[i - 1].PartDch;
-                }
-
-                else
-                {
-                    Mesa[i].PartDch = 0;
-                    Mesa[i].PartIzq = 0;
-                }
-            }
-        }
-
-
-    }
-
-    public static void Play(Player player, Ficha ficha, List<Ficha> Mesa, List<IValid> Reglas)
-    {
-        if (Mesa.Count == 0)
-        {
-            Mesa.Add(ficha);
-            player.Mano?.Remove(ficha);
-            return;
-        }
-
-        int posición = CheckPosition(ficha,Mesa,Reglas);
-
-        while (true)
-        {
-            switch (posición)
-            {
-                case 0:
-                    if (ficha.PartDch != Mesa[0].PartIzq)
-                    {
-                        ficha.Turn();
-                    }
-                    Mesa.Insert(0, ficha);
-                    break;
-
-                case 1:
-                    if (ficha.PartIzq != Mesa[Mesa.Count - 1].PartDch)
-                    {
-                        ficha.Turn();
-                    }
-                    Mesa.Add(ficha);
-                    break;
-
-                case 2:
-                    posición = player.AskPosition();
-                    continue;
-
-
-
-            }
-            player.Mano?.Remove(ficha);
-            break;
-        }
-
-
-
-    }
-    public static int CheckPosition(Ficha ficha, List<Ficha> Mesa, List<IValid> Reglas)
-    {
-        bool cero = false;
-        bool uno = false;
-        bool dos = false;
-
-        for (int i = 0; i < Reglas.Count; i++)
-        {
-            if (Reglas[i].Valid(ficha, Mesa) == 0)
-            {
-                cero = true;
-            }
-
-            if (Reglas[i].Valid(ficha, Mesa) == 1)
-            {
-                uno = true;
-            }
-
-            if (Reglas[i].Valid(ficha, Mesa) == 2)
-            {
-                dos = true;
-                break;
-            }
-
-        }
-
-        if ((cero && uno) || dos)
-        {
-            return 2;
-        }
-
-        else if (cero)
-        {
-            return 0;
-        }
-
-        else return 1;
-    }
-
-
 }

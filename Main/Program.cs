@@ -1,31 +1,51 @@
 ﻿using Engine;
 
+// el nombre de la consola
+Console.ForegroundColor = ConsoleColor.White;
 Console.Title = "Domino Alejan2";
+Console.Clear();
 
-List<IValid> reglas = new List<IValid> { new ClassicDomino() };
-List<IWinCondition> ganadas = new List<IWinCondition>
+// lista de opciones dadas al usuario en una primara fase del proograma
+List<string> Options = new List<string>
 {
-    new PegueWin(),
-    new PointcountWinLower()
+    "Nueva Partida",
+    "Nuevo Torneo",
+    "Salir"
 };
 
-List<IContador> contadores = new List<IContador> { new DefaultCount(), new DoubleCount() };
-
-List<IStopCondition> paradas = new List<IStopCondition>
+// ejecución del programa
+while (true)
 {
-    new Pegue(),
-    new tranque()
-};
+    // el usuario elige si nuevo juego, torneo o si salir del programa
+    string Select = Auxiliar<string>.Selector("DOMINÓ ALEJAN2!", Options);
 
-List<IOrdenador> ordenadores = new List<IOrdenador> {new ParejasOrd()};
+    List<Player> Crew = new List<Player>();
 
-List<Player> Crew = new List<Player> { new PCPlayer("P1",new RandomST()),
- new PCPlayer("P2",new BotaDobleST()), new PCPlayer("P3",new BotagordaST()), new PCPlayer("P4",new BotagordaST())};
+    if (Select == Options[2])
+    {
+        return;
+    }
 
-List<Pareja> parejas = new List<Pareja> {new Pareja(Crew[0],Crew[1]), new Pareja(Crew[2],Crew[3])};
+    else
+    {
+        // lleno la lista de jugadores
+        Crew = PlayerCreator.Players();
 
-Juego X = new Juego(Crew,3,2,reglas,new ClassicRepa(),ordenadores,contadores,false,paradas,ganadas);
+        if (Select == Options[0])
+        {
+            Juego X = GameCreator.Game(Crew);
+            X.RunGame();
+        }
 
-X.RunGame();
+        else if (Select == Options[1])
+        {
+            Tournament T = TournamentCreator.Torneo(Crew);
+            T.Run();
+        }
 
-
+        else
+        {
+            continue;
+        }
+    }
+}

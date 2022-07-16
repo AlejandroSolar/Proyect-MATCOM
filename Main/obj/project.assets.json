@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Main\\Main.csproj",
+      "projectUniqueName": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Main\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Main\\Main.csproj",
+      "projectPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Main\\Main.csproj",
       "packagesPath": "C:\\Users\\Alejandro\\.nuget\\packages\\",
-      "outputPath": "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Main\\obj\\",
+      "outputPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alejandro\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -51,8 +51,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Engine\\Engine.Csproj": {
-              "projectPath": "C:\\movil\\Alejandro\\Universidad\\2do Año\\Programacion II\\Proyecto Domino\\Engine\\Engine.Csproj"
+            "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj": {
+              "projectPath": "C:\\Users\\Alejandro\\Desktop\\Proyecto domino\\Proyecto Domino\\Engine\\Engine.Csproj"
             }
           }
         }
