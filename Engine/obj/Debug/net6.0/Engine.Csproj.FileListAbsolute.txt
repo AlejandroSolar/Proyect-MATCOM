@@ -70,3 +70,75 @@ C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\
 C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\refint\Engine.dll
 C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\Engine.pdb
 C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Engine\obj\Debug\net6.0\ref\Engine.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.deps.json
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\bin\Debug\net6.0\ref\Engine.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.pdb
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.Csproj.AssemblyReference.cache
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.AssemblyInfoInputs.cache
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.AssemblyInfo.cs
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.Csproj.CoreCompileInputs.cache
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\ref\Engine.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.deps.json
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.Csproj.AssemblyReference.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.AssemblyInfoInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.AssemblyInfo.cs
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.Csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\refint\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\ref\Engine.dll
+D:\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.deps.json
+D:\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.dll
+D:\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\ref\Engine.dll
+D:\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.pdb
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.Csproj.AssemblyReference.cache
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.AssemblyInfoInputs.cache
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.AssemblyInfo.cs
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.Csproj.CoreCompileInputs.cache
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.dll
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\ref\Engine.dll
+D:\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.pdb
+C:\343 G.S\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.deps.json
+C:\343 G.S\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.dll
+C:\343 G.S\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\ref\Engine.dll
+C:\343 G.S\Proyect-MATCOM-main\Engine\bin\Debug\net6.0\Engine.pdb
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.Csproj.AssemblyReference.cache
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.AssemblyInfoInputs.cache
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.AssemblyInfo.cs
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.Csproj.CoreCompileInputs.cache
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.dll
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\ref\Engine.dll
+C:\343 G.S\Proyect-MATCOM-main\Engine\obj\Debug\net6.0\Engine.pdb
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.deps.json
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\bin\Debug\net6.0\ref\Engine.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.pdb
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.Csproj.AssemblyReference.cache
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.AssemblyInfoInputs.cache
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.AssemblyInfo.cs
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.Csproj.CoreCompileInputs.cache
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\ref\Engine.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.deps.json
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\bin\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.Csproj.AssemblyReference.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.AssemblyInfoInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.AssemblyInfo.cs
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.Csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\refint\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Engine\obj\Debug\net6.0\ref\Engine.dll

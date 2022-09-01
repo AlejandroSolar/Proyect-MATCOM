@@ -106,3 +106,111 @@ C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Main\obj\Debug\ne
 C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Main\obj\Debug\net6.0\Main.pdb
 C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
 C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM\Main\obj\Debug\net6.0\ref\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.exe
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.deps.json
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.CopyComplete
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\refint\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Proyect-MATCOM-main\Main\obj\Debug\net6.0\ref\Main.dll
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.exe
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.deps.json
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.dll
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\ref\Main.dll
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.pdb
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Engine.dll
+D:\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Engine.pdb
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.CopyComplete
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.dll
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\ref\Main.dll
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.pdb
+D:\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.exe
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.deps.json
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.dll
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Main.pdb
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Engine.dll
+C:\343 G.S\Proyect-MATCOM-main\Main\bin\Debug\net6.0\Engine.pdb
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.csproj.CopyComplete
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.dll
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.pdb
+C:\343 G.S\Proyect-MATCOM-main\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\Main.exe
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\Main.deps.json
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\Main.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\Main.pdb
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\Engine.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\bin\Debug\net6.0\Engine.pdb
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.csproj.CopyComplete
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.pdb
+C:\343 G.S\Escuela\Ciber\Programación\My Projects\Domino Alejan2\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\Main.exe
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\Main.deps.json
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\Main.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\Main.pdb
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\Engine.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\bin\Debug\net6.0\Engine.pdb
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.Csproj.AssemblyReference.cache
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.Csproj.CoreCompileInputs.cache
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.Csproj.CopyComplete
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\ref\Main.dll
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.pdb
+C:\343 G.S\Nueva carpeta\Domino Alejan2\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\bin\Debug\net6.0\Main.exe
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\bin\Debug\net6.0\Main.deps.json
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\bin\Debug\net6.0\Main.runtimeconfig.json
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\bin\Debug\net6.0\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\bin\Debug\net6.0\Main.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\bin\Debug\net6.0\Engine.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\bin\Debug\net6.0\Engine.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.csproj.AssemblyReference.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.AssemblyInfoInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.AssemblyInfo.cs
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.csproj.CopyComplete
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\refint\Main.dll
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.pdb
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\Main.genruntimeconfig.cache
+C:\Users\Alejandro\Desktop\Proyecto 2doSemestre\Domino Alejan2\Main\obj\Debug\net6.0\ref\Main.dll

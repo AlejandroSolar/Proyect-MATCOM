@@ -1,11 +1,11 @@
 ﻿using Engine;
 
 // el nombre de la consola
+Console.Title = "Dominó Alejan2";
 Console.ForegroundColor = ConsoleColor.White;
-Console.Title = "Domino Alejan2";
 Console.Clear();
 
-// lista de opciones dadas al usuario en una primara fase del programa
+// lista de opciones dadas al usuario en una primera fase del programa
 List<string> Options = new List<string>
 {
     "Nueva Partida",
@@ -16,10 +16,10 @@ List<string> Options = new List<string>
 // ejecución del programa
 while (true)
 {
-    // el usuario elige si nuevo juego, torneo o si salir del programa
+    // el usuario elige si empezar un nuevo juego, torneo o si salir del programa
     string Select = Auxiliar<string>.Selector("DOMINÓ ALEJAN2!", Options);
 
-    List<Player> Crew = new List<Player>();
+    IList<Player> Crew;
 
     if (Select == Options[2])
     {
@@ -33,13 +33,13 @@ while (true)
 
         if (Select == Options[0])
         {
-            Juego X = GameCreator.Game(Crew);
-            X.RunGame();
+            Game newGame = GameCreator.Game(Crew);
+            newGame.RunGame();
         }
 
         else if (Select == Options[1])
         {
-            Tournament T = TournamentCreator.Torneo(Crew);
+            Tournament T = TournamentCreator.Tournament(Crew);
             T.Run();
         }
 
