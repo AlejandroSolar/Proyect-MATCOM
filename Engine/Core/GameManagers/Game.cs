@@ -110,15 +110,9 @@ public class Game
         {
             for (int j = i; j <= maxDouble; j++)
             {
-                int pieceValue = 0;
+                // el valor de la ficha se convierte en la suma de los valores dados por cada evaluador.
+                int pieceValue = evaluators.Sum(x => x.Evaluate(i, j));
 
-                // recorre los evaluadores y evalúa las fichas,
-                // luego su valor será la suma de todos los valores
-                // aportados por los evaluadores.
-                for (int k = 0; k < evaluators.Count(); k++)
-                {
-                    pieceValue += evaluators.ElementAt(k).Evaluate(i, j);
-                }
                 // añade la ficha a la caja.
                 Box.Add(new Piece(i, j, pieceValue));
             }
@@ -164,9 +158,9 @@ public class Game
 
         // cuando alguna de las condiciones de parada es aplicada recorre las condiciones de victoria
         // y actualiza la lista de ganadores en concecuencia.
-        for (int i = 0; i < WinConditions.Count(); i++)
+        foreach (var condition in WinConditions)
         {
-            this.Winners = WinConditions.ElementAt(i).Winners(this.Players.Clone()).ToList();
+            this.Winners = condition.Winners(this.Players.Clone()).ToList();
 
             // si una de las condiciones de victoria se aplica el recorrido finaliza,
             // otorgando la victoria solo a los jugadores beneficiados por esa condicion.
@@ -210,9 +204,9 @@ public class Game
             Console.WriteLine("Ganador(es):");
             Console.ForegroundColor = ConsoleColor.Green;
 
-            for (int i = 0; i < Winners.Count; i++)
+            foreach (var winner in Winners)
             {
-                Console.WriteLine(Winners[i]);
+                Console.WriteLine(winner);
             }
 
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -226,13 +220,13 @@ public class Game
         Console.WriteLine();
 
         // recorre los jugadores e imprime sus respectivas puntuaciones.
-        for (int i = 0; i < Players.Count(); i++)
+        foreach (var player in Players)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write($"{Players.ElementAt(i).ToString()}");
+            Console.Write($"{player.ToString()}");
             Console.ResetColor();
-            Console.WriteLine($": {Players.ElementAt(i).CurrentPoints} Puntos ");
-            Players.ElementAt(i).PrintHand();
+            Console.WriteLine($": {player.CurrentPoints} Puntos ");
+            player.PrintHand();
             Console.WriteLine();
             Console.WriteLine();
         }
@@ -268,20 +262,20 @@ public class Game
     private void CoupleWin()
     {
         // recorre la lista de ganadores
-        for (int j = 0; j < Winners!.Count; j++)
+        for (int i =0 ; i < Winners!.Count; i++)
         {
             // recorre las parejas
-            for (int i = 0; i < Couples.Count(); i++)
+            foreach (var couple in Couples)
             {
                 // si no esta la pareja de algún ganador la añade a la lista de ganadores.
-                if (Winners[j] == Couples.ElementAt(i).Player1.Name && !Winners.Contains(Couples.ElementAt(i).Player2.Name))
+                if (Winners[i] == couple.Player1.Name && !Winners.Contains(couple.Player2.Name))
                 {
-                    Winners.Add(Couples.ElementAt(i).Player2.Name);
+                    Winners.Add(couple.Player2.Name);
                 }
 
-                else if (Winners[j] == Couples.ElementAt(i).Player2.Name && !Winners.Contains(Couples.ElementAt(i).Player1.Name))
+                else if (Winners[i] == couple.Player2.Name && !Winners.Contains(couple.Player1.Name))
                 {
-                    Winners.Add(Couples.ElementAt(i).Player1.Name);
+                    Winners.Add(couple.Player1.Name);
                 }
             }
         }

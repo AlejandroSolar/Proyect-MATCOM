@@ -20,15 +20,15 @@ public class HigherDealer : IDealer
             List<int> randomOrder = ChangeOrder(players.Count()); 
 
             // recorre la colección de jugadores.
-            for (int j = 0; j < randomOrder.Count; j++)
+            foreach (var player in players)
             {
                 // añade la ficha más valorada de la caja a la mano del jugador correspondiente.
-                players.ElementAt(randomOrder[j]).Hand.Add(organizedBox[0]);
+                player.Hand.Add(organizedBox[0]);
 
                 // elimina la ficha entregada al jugador de la caja.
                 box.Remove(organizedBox[0]);
                 organizedBox.RemoveAt(0);
-            }          
+            }         
         }
 
         

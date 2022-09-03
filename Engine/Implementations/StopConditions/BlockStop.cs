@@ -8,14 +8,10 @@ public class BlockStop : IStopCondition
 
     public bool Stop(IEnumerable<Player> players, Board table, IEnumerable<IValid> reglas)
     {
-        // recorre la lista de jugadores.
-        for (int i = 0; i < players.Count(); i++)
+        // verifica si algún jugador jugó correctamente en la ronda.
+        if(players.Any( player => !Round.SkipTurn(player,reglas,table)))
         {
-            // si algún jugador no debe pasarse el juego continúa.
-            if (!Round.SkipTurn(players.ElementAt(i), reglas, table))
-            {
-                return false;
-            }
+            return false;
         }
 
         //en caso contrario el juego se detiene.

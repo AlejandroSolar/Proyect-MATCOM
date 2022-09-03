@@ -8,12 +8,12 @@ public class DoublesStrategy : IStrategy
     public Move Choice(IEnumerable<Piece> hand, IEnumerable<Move> possibles, Board table, Register register, IEnumerable<Couple> couples)
     {
         // recorre la lista de jugadas posibles
-        for (int i = 0; i < possibles.Count(); i++)
+        foreach (var move in possibles)
         {
             // si la ficha en possibles en el indice i es doble devuelve esa jugada.
-            if (possibles.ElementAt(i).Piece.LeftSide == possibles.ElementAt(i).Piece.RightSide)
+            if (move.Piece.LeftSide == move.Piece.RightSide)
             {
-                return possibles.ElementAt(i);
+                return move;
             }
         }
         // si no encuentra dobles retorna la primera jugada posible.

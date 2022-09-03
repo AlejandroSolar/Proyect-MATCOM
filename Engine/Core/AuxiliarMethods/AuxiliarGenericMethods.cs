@@ -1,6 +1,5 @@
 namespace Engine;
 
-
 /// <summary>
 /// La clase <c>Auxiliar{T}</c> agrupa métodos que devuelven tipos genéricos y son de utilidad en la aplicación.
 /// </summary>
@@ -17,6 +16,9 @@ public static class Auxiliar<T>
     /// </returns>
     public static T Selector(string subtitle, IEnumerable<T> options)
     {
+        // opcion elegida por el usuario
+        T selectedOption = default(T)!;
+
         // tamaño de las opciones
         int max = options.Count();
 
@@ -26,6 +28,9 @@ public static class Auxiliar<T>
         // mueve el cursor hasta que el usuario selecciona una opción y la devuelve
         while (true)
         {
+            //indice del foreach que recorre options.
+            int index = 0;
+
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($"{subtitle}: \n");
@@ -39,19 +44,28 @@ public static class Auxiliar<T>
             else if (current >= max)
             {
                 current = 0;
+
             }
 
-            for (int i = 0; i < max; i++)
+            foreach (var option in options)
             {
-                if (i == current)
+                if (index == current)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(options.ElementAt(i)!.ToString());
+
+                    // actualiza la opcion resaltada por el usuario.
+                    selectedOption = option;
+
+                    Console.WriteLine(option!.ToString());
                     Console.ResetColor();
+                    index++;
                     continue;
                 }
 
-                Console.WriteLine(options.ElementAt(i)!.ToString());
+                Console.WriteLine(option!.ToString());
+
+                // actualiza el indice.
+                index++;
             }
 
             ConsoleKey input = Console.ReadKey(true).Key;
@@ -67,7 +81,7 @@ public static class Auxiliar<T>
                     break;
 
                 case ConsoleKey.Enter:
-                    return options.ElementAt(current);
+                    return selectedOption;
 
                 default:
                     break;
@@ -108,9 +122,9 @@ public static class Auxiliar<T>
             Console.WriteLine();
 
             // imprime las configuraciones que se han seleccionado hasta ahora.
-            for (int i = 0; i < actual.Count; i++)
+            foreach (var option in actual)
             {
-                Console.WriteLine($" -- {actual[i]!.ToString()}");
+                Console.WriteLine(option!.ToString());
             }
 
             Console.WriteLine();

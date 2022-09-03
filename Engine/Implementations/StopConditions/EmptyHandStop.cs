@@ -7,17 +7,12 @@ public class EmptyHandStop : IStopCondition
 {
     public bool Stop(IEnumerable<Player> players, Board table, IEnumerable<IValid> rules)
     {
-        // recorre los jugadores.
-        for (int i = 0; i < players.Count(); i++)
+        // verifica si algún jugador se pegó.
+        if(players.Any(player => player.Hand.Count == 0))
         {
-            // si la mano de algún jugador está vacía entonces indica que se pegó,
-            // luego el juego debe detenerse.
-            if (players.ElementAt(i).Hand?.Count == 0)
-            {
-                return true;
-            }
+            return true;
         }
-
+        
         // en caso contrario el juego continúa.
         return false;
     }

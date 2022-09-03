@@ -17,16 +17,16 @@ public class DrunkStrategy : RandomStrategy
         int addPiece = 0;
 
         // recorre la mano del jugador.
-        for (int i = 0; i < hand.Count(); i++)
+        foreach (var piece in hand)
         {
             // indica si hay alguna jugada posible con la ficha actual de la mano.
             bool contains = false;
 
             // recorre la lista de posibles.
-            for (int j = 0; j < possibles.Count(); j++)
+            foreach (var move in possibles)
             {
                 // Si hay una jugada posible con esta ficha.
-                if (hand.ElementAt(i) == possibles.ElementAt(j).Piece)
+                if (piece == move.Piece)
                 {
                     // se actualiza el bool y se sale de este ciclo.
                     contains = true;
@@ -38,7 +38,7 @@ public class DrunkStrategy : RandomStrategy
             if (!contains)
             {
                 // añado una jugada con esta ficha (que evidentemente será incorrecta) a newPossibles
-                newPossibles.Add(new Move(hand.ElementAt(i), Move.Position.left, false));
+                newPossibles.Add(new Move(piece, Move.Position.left, false));
                 addPiece++;
             }
 

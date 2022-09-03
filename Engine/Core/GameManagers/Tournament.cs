@@ -24,9 +24,9 @@ public class Tournament
         this.Scoreboard = new Dictionary<string, int>();
 
         // llena la tabla de posiciones con los nombres de los jugadores.
-        for (int i = 0; i < players.Count(); i++)
+        foreach (var player in players)
         {
-            Scoreboard.Add(players.ElementAt(i).Name, 0);
+            Scoreboard.Add(player.Name, 0);
         }
     }
     /// <value> <c>Score</c> representa el puntaje necesario para otorgar la victoria en el torneo.</value>
@@ -90,14 +90,10 @@ public class Tournament
     /// <param name="points"> cantidad de puntos necesarios para finalizar el torneo. </param>
     private bool Win(Dictionary<string, int> scoreBoard, int points)
     {
-        // recorre la tabla de posiciones.
-        for (int i = 0; i < scoreBoard.Count; i++)
+        // si algún jugador alcanza la cantidad de puntos necesarios devuelve verdadero.
+        if (scoreBoard.Any(x => x.Value >= points))
         {
-            // si algún jugador alcanza la cantidad de puntos necesarios devuelve verdadero.
-            if (scoreBoard.ElementAt(i).Value >= points)
-            {
-                return true;
-            }
+            return true;
         }
         return false;
     }
@@ -108,7 +104,7 @@ public class Tournament
     private void TournamentOver()
     {
         //organiza la tabla de posiciones de mayor a menor por los puntos alcanzados.
-        var finalScoreboard = Scoreboard.OrderByDescending(X => X.Value);
+        var finalScoreboard = Scoreboard.OrderByDescending(x => x.Value);
 
         // nos quedamos con los jugadores con la mayor cantidad de puntos
         IEnumerable<string> winners = from x in finalScoreboard where (x.Value == finalScoreboard.First().Value) select x.Key;

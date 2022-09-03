@@ -18,32 +18,33 @@ public class Auxiliar
     {
         IList<Move> forReturn = new List<Move>();
 
-        //Doble for que crea todos los Move posibles a partir de cada ficha
+        //Doble foreach que crea todos los Move posibles a partir de cada ficha
         //y analiza cuales son válidos para, al menos, una de las reglas del juego actual
-        for (int i = 0; i < hand.Count(); i++)
+        foreach (var piece in hand)
         {
-            for (int j = 0; j < rules.Count(); j++)
+            foreach (var rule in rules)
             {
-                if (rules.ElementAt(j).Valid(new Move(hand.ElementAt(i), Move.Position.left, false), table))
+                if (rule.Valid(new Move(piece, Move.Position.left, false), table))
                 {
-                    forReturn.Add(new Move(hand.ElementAt(i), Move.Position.left, false));
+                    forReturn.Add(new Move(piece, Move.Position.left, false));
                 }
 
-                if (rules.ElementAt(j).Valid(new Move(hand.ElementAt(i), Move.Position.right, false), table))
+                if (rule.Valid(new Move(piece, Move.Position.right, false), table))
                 {
-                    forReturn.Add(new Move(hand.ElementAt(i), Move.Position.right, false));
+                    forReturn.Add(new Move(piece, Move.Position.right, false));
                 }
 
-                if (rules.ElementAt(j).Valid(new Move(hand.ElementAt(i), Move.Position.left, true), table))
+                if (rule.Valid(new Move(piece, Move.Position.left, true), table))
                 {
-                    forReturn.Add(new Move(hand.ElementAt(i), Move.Position.left, true));
+                    forReturn.Add(new Move(piece, Move.Position.left, true));
                 }
 
-                if (rules.ElementAt(j).Valid(new Move(hand.ElementAt(i), Move.Position.right, true), table))
+                if (rule.Valid(new Move(piece, Move.Position.right, true), table))
                 {
-                    forReturn.Add(new Move(hand.ElementAt(i), Move.Position.right, true));
+                    forReturn.Add(new Move(piece, Move.Position.right, true));
                 }
             }
+
         }
         return forReturn;
     }

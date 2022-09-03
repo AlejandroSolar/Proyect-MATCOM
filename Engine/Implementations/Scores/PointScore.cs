@@ -10,21 +10,18 @@ public class PointScore : IScore
         // cantidad de puntos que se otorgará a los ganadores.
         int cantidad = 0;
 
-        // recorre los jugadores.
-        for (int i = 0; i < players.Count(); i++)
-        {
-            // si un jugador no es ganador añade sus puntos a la cantidad final.
-            if (!winners.Contains(players.ElementAt(i).Name))
-            {
-                cantidad += players.ElementAt(i).CurrentPoints;
-            }
-        }
+        // almacena los jugadores que no ganaron.
+        var losers = players.Where (player => !winners.Contains(player.Name));
+
+        // suma de las puntuaciones de los perdedores
+        cantidad = losers.Sum( player => player.CurrentPoints);
+
 
         // los ganadores son premiados con el cociente entre la cantidad final
         // y la cantidad de ganadores.
-        for (int i = 0; i < winners.Count(); i++)
+        foreach (var winner in winners)
         {
-            scoreBoard[winners.ElementAt(i)] += cantidad / winners.Count();
+            scoreBoard[winner] += cantidad / winners.Count();
         }
     }
 

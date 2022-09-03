@@ -65,13 +65,13 @@ public class CouplesStrategy : IStrategy
             }
         }
 
-        // recorre la lista de jugadas posibles y retorna la primera jugada
+        // recorre la coleción de jugadas posibles y retorna la primera jugada
         // que no sea por la posición en la que jugó su pareja.
-        for (int i = 0; i < possibles.Count(); i++)
+        foreach (var move in possibles)
         {
-            if (possibles.ElementAt(i).PiecePosition != couplePosition)
+            if (move.PiecePosition != couplePosition)
             {
-                return possibles.ElementAt(i);
+                return move;
             }
         }
 
@@ -90,18 +90,18 @@ public class CouplesStrategy : IStrategy
         string me = register[GuideNumber].PlayerName;
 
         // recorre las parejas.
-        for (int i = 0; i < couples.Count(); i++)
+        foreach (var couple in couples)
         {
             // cuando se encuentre a si mismo actualiza el nombre de la pareja.
-            if (couples.ElementAt(i).Player1.Name == me)
+            if (couple.Player1.Name == me)
             {
-                this.Couple = couples.ElementAt(i).Player2.Name;
+                this.Couple = couple.Player2.Name;
                 return;
             }
 
-            if (couples.ElementAt(i).Player2.Name == me)
+            if (couple.Player2.Name == me)
             {
-                this.Couple = couples.ElementAt(i).Player1.Name;
+                this.Couple = couple.Player1.Name;
                 return;
             }
 

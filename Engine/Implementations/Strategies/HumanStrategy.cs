@@ -23,12 +23,12 @@ public class HumanStrategy : IStrategy
         IList<Move> newPossibles = new List<Move>();
 
         // recorre la lista de jugadas possibles.
-        for (int i = 0; i < possibles.Count(); i++)
+        foreach (var move in possibles)
         {
             // añade a la nueva lista todas las posibles jugadas con la ficha selectedPiece.
-            if (selectedPiece == possibles.ElementAt(i).Piece)
+            if (selectedPiece == move.Piece)
             {
-                newPossibles.Add(possibles.ElementAt(i));
+                newPossibles.Add(move);
             }
         }
 
@@ -106,10 +106,10 @@ public class HumanStrategy : IStrategy
         bool right = false;
 
         // recorre la lista de posibles
-        for (int i = 0; i < newPossibles.Count(); i++)
+        foreach (var move in newPossibles)
         {
             // si en la jugada en el indice actual la ficha se juega por la derecha, actualiza right.
-            if (newPossibles.ElementAt(i).PiecePosition == Move.Position.right)
+            if (move.PiecePosition == Move.Position.right)
             {
                 right = true;
                 continue;

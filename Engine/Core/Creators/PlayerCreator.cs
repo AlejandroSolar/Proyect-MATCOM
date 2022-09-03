@@ -42,9 +42,9 @@ public static class PlayerCreator
             bool repited = false;
 
             // actualiza repited.
-            for (int J = 0; J < players.Count; J++)
+            for (int j = 0; j < players.Count; j++)
             {
-                if (playerName == players[J].Name)
+                if (playerName == players[j].Name)
                 {
                     repited = true;
                     break;

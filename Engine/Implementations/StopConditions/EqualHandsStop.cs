@@ -7,15 +7,14 @@ public class EqualHandsStop : IStopCondition
 {
     public bool Stop(IEnumerable<Player> players, Board mesa, IEnumerable<IValid> reglas)
     {
-        // recorre los jugadores
-        for (int i = 0; i < players.Count() - 1; i++)
+        // cantidad de puntos que debe tener cada jugador.
+        int points = players.First().CurrentPoints;
+
+        // si alguno de los jugadores no tiene la cantidad indicada en points.
+        // no detiene el juego.
+        if (players.Any(player => player.CurrentPoints != points))
         {
-            // si alguno de los jugadores tiene una puntuación en su mano distinta a la del siguiente
-            // el juego continua.
-            if (players.ElementAt(i).CurrentPoints != players.ElementAt(i + 1).CurrentPoints)
-            {
-                return false;
-            }
+            return false;
         }
         // si todos tienen la misma puntuación el juego debe detenerse.
         return true;

@@ -27,16 +27,16 @@ public static class Round
         IEnumerable<Couple> couples
         )
     {
-        for (int i = 0; i < players.Count(); i++)
+        foreach (var player in players)
         {
             // muestra en pantalla el estado actual del juego
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"Es el turno de {players.ElementAt(i).Name}:");
+            Console.WriteLine($"Es el turno de {player.Name}:");
             Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("Tú Mano:");
-            players.ElementAt(i).PrintHand();
+            player.PrintHand();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Mesa:");
@@ -44,17 +44,13 @@ public static class Round
             Console.WriteLine();
 
             // devuelve true si alguna condición de parada se cumple
-            for (int j = 0; j < stopConditions.Count(); j++)
+            if (stopConditions.Any(condition => condition.Stop(players, table.Clone(), rules.Clone())))
             {
-                if (stopConditions.ElementAt(j).Stop(players, table.Clone(), rules.Clone()))
-                {
-                    return true;
-                }
-
+                return true;
             }
 
             // alerta al jugador de que se pasó
-            if (SkipTurn(players.ElementAt(i), rules, table))
+            if (SkipTurn(player, rules, table))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("No puedes jugar");
@@ -62,38 +58,39 @@ public static class Round
                 Console.ReadLine();
 
                 // actualiza el registro con el turno fallido del jugador
-                register.Add(new Event(players.ElementAt(i).Name, null!, Move.Position.left));
+                register.Add(new Event(player.Name, null!, Move.Position.left));
                 continue;
             }
 
-            // jugada elegida por el jugador al que le corresponde jugar.
-            Move move = players.ElementAt(i).PlayerChoice(table, rules, register, couples);
-
-            // verifica si la jugada elegida puede ejecutarse.
-            bool valid = CheckValid(move, rules, table);
-
-            // si no es posible la jugada seleccionada por el jugador 
-            // no permite jugarla y vuelve a empezar su turno hasta que 
-            // seleccione una ficha correcta.
-            if (!valid)
+            while (true)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Jugada no valida");
-                Console.ResetColor();
-                Thread.Sleep(800);
+                // jugada elegida por el jugador al que le corresponde jugar.
+                Move move = player.PlayerChoice(table, rules, register, couples);
 
-                i -= 1;
-                continue;
+                // si no es posible la jugada seleccionada por el jugador 
+                // no permite jugarla y vuelve a empezar su turno hasta que 
+                // seleccione una ficha correcta.
+                if (!CheckValid(move, rules, table))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Jugada no valida");
+                    Console.ResetColor();
+                    Thread.Sleep(800);
+                }
+
+                // si la jugada es valida.
+                else
+                {
+                    // juega la ficha en el tablero.
+                    Play(player, move, table);
+
+                    // actualiza el registro de juego
+                    register.Add(new Event(player.Name, move.Piece, move.PiecePosition));
+                    register.PrintActual();
+                    break;
+                }
+
             }
-
-            // juega la ficha en el tablero.
-            Play(players.ElementAt(i), move, table);
-
-            // actualiza el registro de juego
-            register.Add(new Event(players.ElementAt(i).Name, move.Piece, move.PiecePosition));
-            register.PrintActual();
-
-
             Console.ReadLine();
         }
         return false;
@@ -175,13 +172,11 @@ public static class Round
         }
 
         //recorre las reglas y si la jugada es válida para alguna de ellas entonces es posible.
-        foreach (var rule in rules)
+        if (rules.Any(rule => rule.Valid(move, table)))
         {
-            if (rule.Valid(move, table))
-            {
-                return true;
-            }
+            return true;
         }
+
         return false;
     }
 

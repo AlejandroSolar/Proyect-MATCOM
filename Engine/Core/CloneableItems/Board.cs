@@ -37,16 +37,7 @@ public class Board : ICloneable<Board>
     /// <returns>
     /// Un <typeparamref name="int"/> con el valor actual de la mesa.
     /// </returns>
-    private int GetValue()
-    {
-        int tempValue = 0;
-        // suma el valor de cada ficha en la mesa
-        foreach (var item in this.Table)
-        {
-            tempValue += item.PieceValue;
-        }
-        return tempValue;
-    }
+    private int GetValue() => Table.Sum(x => x.PieceValue);
 
     /// <summary>
     /// Coloca una ficha a la derecha de la mesa.

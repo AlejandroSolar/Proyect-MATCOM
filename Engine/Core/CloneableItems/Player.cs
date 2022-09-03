@@ -72,9 +72,9 @@ public class Player : ICloneable<Player>
     public void PrintHand()
     {
         // representa ficha por ficha.
-        for (int i = 0; i < Hand?.Count; i++)
+        foreach (var piece in Hand)
         {
-            Console.Write($"{Hand[i]}  ");
+            Console.Write(piece.ToString() + " ");
         }
     }
 
@@ -84,18 +84,7 @@ public class Player : ICloneable<Player>
     /// <returns>
     /// Un <typeparamref name="int"/> con el valor actual de la mano.
     /// </returns>
-    private int Points()
-    {
-        int totalPoints = 0;
-
-        // va sumando el valor de cada ficha.
-        for (int i = 0; i < Hand?.Count; i++)
-        {
-            totalPoints += Hand[i].PieceValue;
-        }
-        // devuelve la suma total. 
-        return totalPoints;
-    }
+    private int Points() => Hand.Sum(x => x.PieceValue);
 
     /// <summary>
     /// Crea un clon del jugador.

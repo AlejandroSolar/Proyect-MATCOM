@@ -19,18 +19,16 @@ public class CouplesOrderer : ITurnOrderer
         players.Clear();
 
         // recorre las parejas y añade los player1.
-        for (int i = 0; i < couples.Count(); i++)
+        foreach (var couple in couples)
         {
-            players.Add(couples.ElementAt(i).Player1);
-
+            players.Add(couple.Player1);
         }
         
         // vuelve a recorrer las parajas para añadir los player2
-        for (int i = 0; i < couples.Count(); i++)
+        foreach (var couple in couples)
         {
-            players.Add(couples.ElementAt(i).Player2);
+            players.Add(couple.Player2);
         }
-
     }
 
     // representación en string del tipo de ordenador de turnos.

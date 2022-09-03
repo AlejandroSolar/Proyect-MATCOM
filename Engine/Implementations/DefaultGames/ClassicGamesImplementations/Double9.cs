@@ -15,4 +15,3 @@ public class Double9 : ClasicGames
         return "Doble 9";
     }
 }
-

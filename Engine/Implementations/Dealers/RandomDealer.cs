@@ -9,7 +9,7 @@ public class RandomDealer : IDealer
     {
         // recorre por la cantidad de fichas que se deben repartir.
         // coincide con la cantidad de jugadores * capacidad máxima de las manos. 
-        for (int i = 0; i < players.Count(); i++)
+        foreach (var player in players)
         {
             for (int j = 0; j < capacity; j++)
             {
@@ -18,7 +18,7 @@ public class RandomDealer : IDealer
                 int auxiliar = random.Next(box.Count);
 
                 // reparte la ficha de la caja en la posicion del indice aleatorio anteriormente calculado.
-                players.ElementAt(i).Hand?.Add(box[auxiliar]);
+                player.Hand?.Add(box[auxiliar]);
 
                 // elimina de la caja la ficha en ese indice para evitar entregar fichas repetidas.
                 box.RemoveAt(auxiliar);

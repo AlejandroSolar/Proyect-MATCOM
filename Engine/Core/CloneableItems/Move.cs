@@ -6,7 +6,6 @@ namespace Engine;
 /// <remarks> Es clonable. </remarks>
 public class Move : ICloneable<Move>
 {
-
     public enum Position
     {
         left,

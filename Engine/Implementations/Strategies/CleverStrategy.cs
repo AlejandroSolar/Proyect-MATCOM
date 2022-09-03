@@ -63,34 +63,37 @@ public class CleverStrategy : IStrategy
             }
         }
 
-        //Si llegado a este punto otherPlayersPassedValues está vacío, significa que nadie se ha pasado aún.
+        // Si llegado a este punto otherPlayersPassedValues está vacío, significa que nadie se ha pasado aún.
         // si nadie se ha pasado en todo el juego juega la primera de las posibles.
         if (otherPlayersPassedValues.Count == 0)
         {
             return possibles.First();
         }
 
+        // indice del foreach que recorre las jugadas posibles.
+        int index = 0;
+
         // si alguien se pasó recorre la lista de posibles jugadas.
-        for (int i = 0; i < possibles.Count(); i++)
+        foreach (var move in possibles)
         {
             // valor que puede dejar la jugada actual como extremo
             int possibleExtreme = 0;
  
             // si la jugada actual es por la derecha.
-            if (possibles.ElementAt(i).PiecePosition == Move.Position.right)
+            if (move.PiecePosition == Move.Position.right)
             {
                 // si la ficha debe ser girada.
-                if (possibles.ElementAt(i).IsTurned)
+                if (move.IsTurned)
                 {
                     // actualiza el extremo con la parte izquierda. 
-                    possibleExtreme = possibles.ElementAt(i).Piece.LeftSide;
+                    possibleExtreme = move.Piece.LeftSide;
                 }
 
                 // si la ficha no debe ser girada.
                 else
                 {
                     // actualiza el extremo con la parte derecha. 
-                    possibleExtreme = possibles.ElementAt(i).Piece.RightSide;
+                    possibleExtreme = move.Piece.RightSide;
                 }
             }
 
@@ -98,25 +101,28 @@ public class CleverStrategy : IStrategy
             else
             {
                 // si la ficha debe ser girada.
-                if (possibles.ElementAt(i).IsTurned)
+                if (move.IsTurned)
                 {
                     // actualiza el extremo con la parte derecha.
-                    possibleExtreme = possibles.ElementAt(i).Piece.RightSide;
+                    possibleExtreme = move.Piece.RightSide;
                 }
 
                 // si la ficha no debe ser girada.
                 else
                 {
                     // actualiza el extremo con la parte izquierda. 
-                    possibleExtreme = possibles.ElementAt(i).Piece.LeftSide;
+                    possibleExtreme = move.Piece.LeftSide;
                 }
             }
+
+            // actualiza el indice.
+            index ++;
 
             // si los posibles extremos no contienen al extremo actual se añade a los posibles.
             // junto con el índice de la jugada en "possibles" que estábamos analizando.
             if (!possibleExtremeValues.ContainsKey(possibleExtreme))
             {
-                possibleExtremeValues.Add(possibleExtreme, i);
+                possibleExtremeValues.Add(possibleExtreme, index);
             }
         }
 
