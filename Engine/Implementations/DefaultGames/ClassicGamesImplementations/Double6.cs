@@ -10,8 +10,5 @@ public class Double6 : ClasicGames
     public override int HandCapacity { get { return 7; } }
 
     // representación en string del tipo de juego.
-    public override string ToString()
-    {
-        return "Doble 6";
-    }
+    public override string ToString() => "Doble 6";
 }

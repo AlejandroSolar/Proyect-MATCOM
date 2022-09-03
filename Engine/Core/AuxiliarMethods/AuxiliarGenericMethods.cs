@@ -99,7 +99,7 @@ public static class Auxiliar<T>
     public static void ConfigSelector(IList<T> actual, IEnumerable<Type> typeCollection, string orientation)
     {
         // crea una lista de opciones mediante reflection 
-        IList<T> options = Reflection<T>.ListCreator(typeCollection);
+        IList<T> options = Reflection<T>.CollectionCreator(typeCollection).ToList();
 
         while (true)
         {
@@ -122,10 +122,7 @@ public static class Auxiliar<T>
             Console.WriteLine();
 
             // imprime las configuraciones que se han seleccionado hasta ahora.
-            foreach (var option in actual)
-            {
-                Console.WriteLine(option!.ToString());
-            }
+            actual.ToList().ForEach(x => Console.WriteLine(x!.ToString()));
 
             Console.WriteLine();
             Console.WriteLine("Enter para continuar");

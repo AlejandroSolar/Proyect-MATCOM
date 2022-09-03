@@ -40,8 +40,5 @@ public class Move : ICloneable<Move>
     /// <returns>
     /// Un nuevo <typeparamref name="Move"/> con una copia de la ficha e iguales posición y mismo valor de rotación.
     /// </returns>
-    public Move Clone()
-    {
-        return new Move(this.Piece.Clone(),this.PiecePosition,this.IsTurned);
-    }
+    public Move Clone() => new Move(this.Piece.Clone(), this.PiecePosition, this.IsTurned);
 }

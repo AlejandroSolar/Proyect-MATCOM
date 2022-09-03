@@ -23,8 +23,5 @@ public static class SimpeCloneableExtensors
     /// <returns>
     /// Un nuevo <typeparamref name="IEnumerable"/> de <typeparamref name="ISimpleClone"/> con copias de cada elemento del original.
     /// </returns>
-    public static IEnumerable<T> Clone<T>(this IEnumerable<T> collection) where T : ISimpleClone<T>
-    {
-        return from x in collection select x.Clone();
-    }
+    public static IEnumerable<T> Clone<T>(this IEnumerable<T> collection) where T : ISimpleClone<T> => collection.Select(x => x.Clone());
 }

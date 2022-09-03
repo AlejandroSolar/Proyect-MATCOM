@@ -19,8 +19,5 @@ public class BlockStop : IStopCondition
     }
 
     // representación en string del tipo de condición de parada.
-    public override string ToString()
-    {
-        return "Parada por tranque del juego";
-    }
+    public override string ToString() => "Parada por tranque del juego";
 }

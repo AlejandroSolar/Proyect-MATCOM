@@ -109,8 +109,5 @@ public class CouplesStrategy : IStrategy
     }
 
     // representación en string del tipo de estrategia.
-    public override string ToString()
-    {
-        return "Jugador en parejas";
-    }
+    public override string ToString() => "Jugador en parejas";
 }

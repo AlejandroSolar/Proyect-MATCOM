@@ -13,8 +13,5 @@ public class HigherPointsWin : IWinCondition
     }
 
     // representación en string del tipo de condición de victoria.
-    public override string ToString()
-    {
-        return "Victoria por Mayor cantidad de puntos";
-    }
+    public override string ToString() => "Victoria por Mayor cantidad de puntos";
 }

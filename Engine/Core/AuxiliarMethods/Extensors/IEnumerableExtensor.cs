@@ -13,6 +13,6 @@ public static class IEnumerableExtensors
     /// </returns>
     public static IEnumerable<T> Clone<T>(this IEnumerable<T> collection) where T : ICloneable<T>
     {
-        return from x in collection select x.Clone();
+        return collection.Select(x => x.Clone());
     }
 }

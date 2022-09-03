@@ -20,27 +20,17 @@ public class HumanStrategy : IStrategy
         Move selectedPlay;
 
         // crea una nueva lista de jugadas posibles, que contendrá todas las jugadas posibles con la ficha seleccionada.
-        IList<Move> newPossibles = new List<Move>();
-
-        // recorre la lista de jugadas possibles.
-        foreach (var move in possibles)
-        {
-            // añade a la nueva lista todas las posibles jugadas con la ficha selectedPiece.
-            if (selectedPiece == move.Piece)
-            {
-                newPossibles.Add(move);
-            }
-        }
+        Move[] newPossibles = possibles.Where(x => x.Piece.Equals(selectedPiece)).ToArray();
 
         // si no hay ninguna jugada con la ficha elegida.
-        if (newPossibles.Count == 0)
+        if (newPossibles.Length == 0)
         {
             // guarda en selectedPlay una nueva jugada con esta ficha, que será marcada como incorrecta en la ejecución del juego.
             selectedPlay = new Move(selectedPiece, Move.Position.left, false);
         }
 
         // si solo hay una jugada posible.
-        else if (newPossibles.Count == 1)
+        else if (newPossibles.Length == 1)
         {
             // guarda en selectedPlay esa única jugada.
             selectedPlay = newPossibles.First();
@@ -55,17 +45,10 @@ public class HumanStrategy : IStrategy
                 // Se pregunta al usuario por la posición.
                 Move.Position position = AskForPosition();
 
-                // recorre la nueva lista de posibles eliminando las jugadas que no sean por la posición seleccionada.
-                for (int i = newPossibles.Count - 1; i >= 0; i--)
-                {
-                    if (newPossibles[i].PiecePosition != position)
-                    {
-                        newPossibles.RemoveAt(i);
-                    }
-                }
+                newPossibles = newPossibles.Where(x => x.PiecePosition == position).ToArray();
 
                 // si solo queda una jugada posible
-                if (newPossibles.Count == 1)
+                if (newPossibles.Length == 1)
                 {
                     // guarda en selectedPlay esa jugada.
                     selectedPlay = newPossibles.First();
@@ -102,33 +85,10 @@ public class HumanStrategy : IStrategy
     private bool AmbiguousPlay(IEnumerable<Move> newPossibles)
     {
         // representan si la ficha es jugable por izquierda y por derecha.
-        bool left = false;
-        bool right = false;
+        bool left = newPossibles.Any( x => x.PiecePosition == Move.Position.right);
+        bool right = newPossibles.Any( x => x.PiecePosition == Move.Position.left);
 
-        // recorre la lista de posibles
-        foreach (var move in newPossibles)
-        {
-            // si en la jugada en el indice actual la ficha se juega por la derecha, actualiza right.
-            if (move.PiecePosition == Move.Position.right)
-            {
-                right = true;
-                continue;
-            }
-
-            // si en la jugada en el indice actual la ficha se juega por la izquierda, actualiza left.
-            else
-            {
-                left = true;
-            }
-        }
-
-        // si son verdaderos left y right quiere decir que la ficha es ambigua.
-        if (left && right)
-        {
-            return true;
-        }
-
-        return false;
+        return left && right;
     }
 
     /// <summary>
@@ -220,8 +180,5 @@ public class HumanStrategy : IStrategy
     }
 
     // representación en string del tipo de estrategia.
-    public override string ToString()
-    {
-        return "Jugador Humano";
-    }
+    public override string ToString() => "Jugador Humano";
 }

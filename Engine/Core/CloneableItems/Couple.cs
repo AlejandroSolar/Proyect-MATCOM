@@ -29,8 +29,5 @@ public class Couple : ICloneable<Couple>
     /// <returns>
     /// Una nueva <typeparamref name="Couple"/> con copias de los jugadores de la pareja original
     /// </returns>
-    public Couple Clone()
-    {
-        return new Couple(this.Player1.Clone(), this.Player2.Clone());
-    }
+    public Couple Clone() => new Couple(this.Player1.Clone(), this.Player2.Clone());
 }

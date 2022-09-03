@@ -86,8 +86,5 @@ public class HigherExtremeValid : IValid
     }
 
     // representación en string del tipo de regla.
-    public override string ToString()
-    {
-        return "Regla del mayor extremo";
-    }
+    public override string ToString() => "Regla del mayor extremo";
 }

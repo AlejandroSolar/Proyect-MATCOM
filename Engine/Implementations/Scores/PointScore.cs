@@ -16,7 +16,6 @@ public class PointScore : IScore
         // suma de las puntuaciones de los perdedores
         cantidad = losers.Sum( player => player.CurrentPoints);
 
-
         // los ganadores son premiados con el cociente entre la cantidad final
         // y la cantidad de ganadores.
         foreach (var winner in winners)
@@ -26,8 +25,5 @@ public class PointScore : IScore
     }
 
     // representación en string del tipo de puntuador.
-    public override string ToString()
-    {
-        return "Puntos por puntuación de los perdedores";
-    }
+    public override string ToString() => "Puntos por puntuación de los perdedores";
 }

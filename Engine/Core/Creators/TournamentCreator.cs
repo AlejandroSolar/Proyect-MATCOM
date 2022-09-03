@@ -38,7 +38,7 @@ public static class TournamentCreator
             pointLimit = Auxiliar.NumberSelector("¿Cuanto se debe puntuar para ganar en el torneo?", 1);
         }
         // el usuario elige una forma de premiación entre las previamente implementadas.
-        score = Auxiliar<IScore>.Selector("¿Como se puntuara en el Torneo?", Reflection<IScore>.ListCreator(Scoring));
+        score = Auxiliar<IScore>.Selector("¿Como se puntuara en el Torneo?", Reflection<IScore>.CollectionCreator(Scoring));
 
         // devuelve una nueva instancia de torneo con los valores anteriormente obtenidos.
         return new Tournament(pointLimit, games, score, players);

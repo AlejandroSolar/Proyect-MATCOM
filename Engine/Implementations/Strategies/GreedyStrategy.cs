@@ -12,8 +12,5 @@ public class GreedyStrategy : IStrategy
     }
 
     // representación en string del tipo de estrategia.
-    public override string ToString()
-    {
-        return "Jugador Botagorda";
-    }
+    public override string ToString() => "Jugador Botagorda";
 }

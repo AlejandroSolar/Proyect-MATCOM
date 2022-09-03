@@ -80,8 +80,5 @@ public class ClassicValid : IValid
     }
 
     // representación en string del tipo de regla.
-    public override string ToString()
-    {
-        return "Reglas Clasicas";
-    }
+    public override string ToString() => "Reglas Clasicas";
 }

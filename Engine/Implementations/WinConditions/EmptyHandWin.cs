@@ -12,8 +12,5 @@ public class EmptyHandWin : IWinCondition
     }
 
     // representación en string del tipo de condición de victoria.
-    public override string ToString()
-    {
-        return "Victoria por pegue";
-    }
+    public override string ToString() => "Victoria por pegue";
 }

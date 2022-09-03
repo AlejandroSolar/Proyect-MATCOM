@@ -115,15 +115,15 @@ public class CleverStrategy : IStrategy
                 }
             }
 
-            // actualiza el indice.
-            index ++;
-
             // si los posibles extremos no contienen al extremo actual se añade a los posibles.
             // junto con el índice de la jugada en "possibles" que estábamos analizando.
             if (!possibleExtremeValues.ContainsKey(possibleExtreme))
             {
                 possibleExtremeValues.Add(possibleExtreme, index);
             }
+
+            // actualiza el indice.
+            index ++;
         }
 
         // guarda ordenado el diccionario de los valores por los que otros jugadores se han pasado.
@@ -163,8 +163,5 @@ public class CleverStrategy : IStrategy
     }
 
     //Representación en string de la estrategia.
-    public override string ToString()
-    {
-        return "jugador inteligente";
-    }
+    public override string ToString() => "jugador inteligente";
 }

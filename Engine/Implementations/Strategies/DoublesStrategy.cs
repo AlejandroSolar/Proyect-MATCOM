@@ -21,8 +21,5 @@ public class DoublesStrategy : IStrategy
     }
 
     // representación en string del tipo de estrategia.
-    public override string ToString()
-    {
-        return "Jugador Botadobles";
-    }
+    public override string ToString() => "Jugador Botadobles";
 }

@@ -10,8 +10,5 @@ public class Double9 : ClasicGames
     public override int HandCapacity { get { return 10; } }
 
     // representación en string del tipo de juego.
-    public override string ToString()
-    {
-        return "Doble 9";
-    }
+    public override string ToString() => "Doble 9";
 }

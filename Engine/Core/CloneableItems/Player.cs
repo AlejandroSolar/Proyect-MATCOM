@@ -22,7 +22,7 @@ public class Player : ICloneable<Player>
     public IList<Piece> Hand { get; private set; }
 
     /// <value> <c>CurrentPoints</c> representa el valor de la mano del jugador (Suma del valor de todas sus fichas). </value>
-    public int CurrentPoints { get { return Points(); } }
+    public int CurrentPoints { get { return Hand.Sum(x => x.PieceValue); } }
 
     /// <value> <c>Name</c> representa el nombre del jugador. </value>
     public string Name { get; }
@@ -55,12 +55,7 @@ public class Player : ICloneable<Player>
         Piece chosedPiece = null!;
 
         // como choosedMove se eligió a partir de clones de los parametros se comprueba con la mano original.
-        chosedPiece = this.Hand.Where
-        (
-            x => x.LeftSide == chosedMove.Piece.LeftSide
-            && x.RightSide == chosedMove.Piece.RightSide
-            && x.PieceValue == chosedMove.Piece.PieceValue
-        ).First();
+        chosedPiece = this.Hand.Where(x => x.Equals(chosedMove.Piece)).First();
 
         // devuelve la jugada con una instancia de la ficha de la mano original.
         return new Move(chosedPiece, chosedMove.PiecePosition, chosedMove.IsTurned);
@@ -69,22 +64,7 @@ public class Player : ICloneable<Player>
     /// <summary>
     /// Representa gráficamente el estado actual de la mano.
     /// </summary>
-    public void PrintHand()
-    {
-        // representa ficha por ficha.
-        foreach (var piece in Hand)
-        {
-            Console.Write(piece.ToString() + " ");
-        }
-    }
-
-    /// <summary>
-    /// Calcula el valor actual de la mano.
-    /// </summary>
-    /// <returns>
-    /// Un <typeparamref name="int"/> con el valor actual de la mano.
-    /// </returns>
-    private int Points() => Hand.Sum(x => x.PieceValue);
+    public void PrintHand() => Hand.ToList().ForEach(x => Console.WriteLine(x.ToString()));
 
     /// <summary>
     /// Crea un clon del jugador.
@@ -105,8 +85,5 @@ public class Player : ICloneable<Player>
     /// <returns>
     /// Un <typeparamref name="string"/> con el nombre del jugador y la estrategia que sigue.
     /// </returns>
-    public override string ToString()
-    {
-        return $"{this.Name} ({this.Strategy.ToString()})";
-    }
+    public override string ToString() => $"{this.Name} ({this.Strategy.ToString()})";
 }

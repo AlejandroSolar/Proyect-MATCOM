@@ -38,16 +38,33 @@ public class Piece : ICloneable<Piece>
         this.RightSide = temp;
     }
 
+    public override bool Equals(object? obj)
+    {
+        if (obj is Piece x)
+        {
+            if (x.LeftSide == this.LeftSide 
+            && x.RightSide == this.RightSide 
+            && x.PieceValue == this.PieceValue)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
+    
     /// <summary>
     /// Clona una ficha.
     /// </summary>
     /// <returns>
     /// Un nuevo <typeparamref name="Piece"/> con los mismos valores de la original.
     /// </returns>
-    public Piece Clone()
-    {
-        return new Piece(this.LeftSide, this.RightSide, this.PieceValue);
-    }
+    public Piece Clone() => new Piece(this.LeftSide, this.RightSide, this.PieceValue);
 
     /// <summary>
     /// Representa gráficamente la ficha.
@@ -55,9 +72,6 @@ public class Piece : ICloneable<Piece>
     /// <returns>
     /// Un <typeparamref name="string"/> con la representacion de la ficha.
     /// </returns>
-    public override string ToString()
-    {
-        return $"[{this.LeftSide}|{this.RightSide}]";
-    }
+    public override string ToString() => $"[{this.LeftSide}|{this.RightSide}]";
 
 }

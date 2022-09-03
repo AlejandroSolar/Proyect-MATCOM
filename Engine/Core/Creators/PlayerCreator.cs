@@ -6,7 +6,7 @@ namespace Engine;
 public static class PlayerCreator
 {
     /// <value> <c>Strategies</c> contiene una instancia de cada tipo de estrategia que esté implementada</value>
-    private static IEnumerable<IStrategy> Strategies = Reflection<IStrategy>.ListCreator(Reflection<IStrategy>.TypesCollectionCreator());
+    private static IEnumerable<IStrategy> Strategies = Reflection<IStrategy>.CollectionCreator(Reflection<IStrategy>.TypesCollectionCreator());
 
     /// <summary>
     /// Crea la lista de jugadores de acuerdo con las indicaciones del usuario.
@@ -38,20 +38,8 @@ public static class PlayerCreator
                 playerName = $"Player {i + 1}";
             }
 
-            // representa si hay algun nombre que se repita entre los jugadores 
-            bool repited = false;
-
-            // actualiza repited.
-            for (int j = 0; j < players.Count; j++)
-            {
-                if (playerName == players[j].Name)
-                {
-                    repited = true;
-                    break;
-                }
-            }
             // no permite que el usuario le ponga el mismo nombre a varios jugadores
-            if (repited)
+            if (players.Any(x=> x.Name == playerName))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Nombre ya existente!");

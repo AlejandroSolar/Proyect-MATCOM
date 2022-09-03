@@ -293,14 +293,16 @@ public class Game
             currentOrganizer = 0;
         }
 
+        ITurnOrderer current = Orderers.ElementAt(currentOrganizer);
+
         Console.Clear();
         Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine($"Aplicando {Orderers.ElementAt(currentOrganizer).ToString()}...");
+        Console.WriteLine($"Aplicando {current.ToString()}...");
         Console.ResetColor();
         Thread.Sleep(2000);
 
         // ordena la lista de jugadores de acuerdo con el criterio de ordenación actual.
-        Orderers.ElementAt(currentOrganizer).Organize(Players, Couples);
+        current.Organize(Players, Couples);
 
         // pasa al siguiente ordenador.
         currentOrganizer += 1;

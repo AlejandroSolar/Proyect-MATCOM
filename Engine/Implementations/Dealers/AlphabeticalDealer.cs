@@ -27,8 +27,5 @@ public class AlphabeticalDealer : IDealer
     }
 
     // representación en string del tipo de repartidor.
-    public override string ToString()
-    {
-        return "Repartidor alfabético";
-    }
+    public override string ToString() => "Repartidor alfabético";
 }

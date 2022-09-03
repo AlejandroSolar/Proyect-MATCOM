@@ -16,8 +16,5 @@ public class WinScore : IScore
     }
 
     // representación en string del tipo de puntuador.
-    public override string ToString()
-    {
-        return "Puntos por Victoria";
-    }
+    public override string ToString() => "Puntos por Victoria";
 }

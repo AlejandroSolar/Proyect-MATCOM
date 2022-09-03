@@ -32,8 +32,5 @@ public class CouplesOrderer : ITurnOrderer
     }
 
     // representación en string del tipo de ordenador de turnos.
-    public override string ToString()
-    {
-        return "Ordenador de turnos por pareja";
-    }
+    public override string ToString() => "Ordenador de turnos por pareja";
 }

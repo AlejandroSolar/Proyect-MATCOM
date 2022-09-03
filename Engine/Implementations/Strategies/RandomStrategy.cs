@@ -13,8 +13,5 @@ public class RandomStrategy : IStrategy
     }
 
     // representación en string del tipo de estrategia.
-    public override string ToString()
-    {
-        return "Jugador Random";
-    }
+    public override string ToString() => "Jugador Random";
 }

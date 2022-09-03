@@ -18,8 +18,5 @@ public class EmptyHandStop : IStopCondition
     }
 
     // representación en string del tipo de condición de parada.
-    public override string ToString()
-    {
-        return "Parada por pegue de un Jugador";
-    }
+    public override string ToString() => "Parada por pegue de un Jugador";
 }

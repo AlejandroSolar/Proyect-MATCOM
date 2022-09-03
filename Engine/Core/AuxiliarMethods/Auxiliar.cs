@@ -22,29 +22,33 @@ public class Auxiliar
         //y analiza cuales son válidos para, al menos, una de las reglas del juego actual
         foreach (var piece in hand)
         {
+            Move move1 = new Move(piece, Move.Position.left, false);
+            Move move2 = new Move(piece, Move.Position.right, false);
+            Move move3 = new Move(piece, Move.Position.left, true);
+            Move move4 = new Move(piece, Move.Position.right, true);
+
             foreach (var rule in rules)
             {
-                if (rule.Valid(new Move(piece, Move.Position.left, false), table))
+                if (!forReturn.Contains(move1) && rule.Valid(move1, table))
                 {
-                    forReturn.Add(new Move(piece, Move.Position.left, false));
+                    forReturn.Add(move1);
                 }
 
-                if (rule.Valid(new Move(piece, Move.Position.right, false), table))
+                if (!forReturn.Contains(move2) && rule.Valid(move2, table))
                 {
-                    forReturn.Add(new Move(piece, Move.Position.right, false));
+                    forReturn.Add(move2);
                 }
 
-                if (rule.Valid(new Move(piece, Move.Position.left, true), table))
+                if (!forReturn.Contains(move3) && rule.Valid(move3, table))
                 {
-                    forReturn.Add(new Move(piece, Move.Position.left, true));
+                    forReturn.Add(move3);
                 }
 
-                if (rule.Valid(new Move(piece, Move.Position.right, true), table))
+                if (!forReturn.Contains(move4) && rule.Valid(move4, table))
                 {
-                    forReturn.Add(new Move(piece, Move.Position.right, true));
+                    forReturn.Add(move4);
                 }
             }
-
         }
         return forReturn;
     }

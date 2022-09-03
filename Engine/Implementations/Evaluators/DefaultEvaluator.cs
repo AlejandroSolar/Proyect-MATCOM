@@ -6,14 +6,8 @@ namespace Engine;
 public class DefaultEvaluator : IEvaluator
 {
     // el valor de la ficha va a ser la suma de los valores de sus partes izquierda y derecha.
-    public int Evaluate(int left, int right)
-    {
-        return left + right;
-    }
+    public int Evaluate(int left, int right) => left + right;
 
     // representación en string del tipo de evaluador.
-    public override string ToString()
-    {
-        return "Evaluador Clasico";
-    }
+    public override string ToString() => "Evaluador Clasico";
 }

@@ -32,7 +32,7 @@ public class Event : ICloneable<Event>
     /// Representa el evento gráficamente.
     /// </summary>
     /// <param name="first"> indica si es o nó es el primer evento del juego. </param>
-        public void PrintEvent(bool first)
+    public void PrintEvent(bool first)
     {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write(PlayerName);
@@ -51,6 +51,7 @@ public class Event : ICloneable<Event>
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write(PlayedPiece.ToString());
         Console.ResetColor();
+        
         if (first)
         {
             Console.WriteLine();
@@ -71,7 +72,6 @@ public class Event : ICloneable<Event>
             Console.WriteLine(pos);
             Console.ResetColor();
         }
-
     }
 
     /// <summary>

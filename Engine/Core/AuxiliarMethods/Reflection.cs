@@ -24,16 +24,7 @@ public static class Reflection<T>
     /// <returns>
     /// Una <typeparamref name="IList"/> con instancias de cada tipo en la colección recibida.
     /// </returns>
-    public static IList<T> ListCreator(IEnumerable<Type> types)
-    {
-        // va creando instancias de cada tipo de la lista y los almacena
-        IList<T> result = new List<T>();
-        foreach (var type in types)
-        {
-            result.Add(DefaultInstanceCreator(type));
-        }
-        return result;
-    }
+    public static IEnumerable<T> CollectionCreator(IEnumerable<Type> types) => types.Select(type => DefaultInstanceCreator(type));
 
     /// <summary>
     /// Crea una colección que almacena todos los tipos de un ensamblado que contenga al tipo T.

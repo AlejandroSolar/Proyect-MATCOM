@@ -17,8 +17,5 @@ public class DoubleEvaluator : IEvaluator
     }
 
     // representación en string del tipo de evaluador.
-    public override string ToString()
-    {
-        return "Evaluador de Dobles";
-    }
+    public override string ToString() => "Evaluador de Dobles";
 }

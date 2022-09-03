@@ -91,13 +91,5 @@ public class Register : ICloneable<Register>
     /// <returns>
     /// Un nuevo <typeparamref name="Register"/> con una copia de cada evento del original.
     /// </returns>
-    public Register Clone()
-    {
-        Register clone = new Register();
-        clone.GameRegister = this.GameRegister.Clone().ToList();
-        return clone;
-    }
-
+    public Register Clone() => new Register() { GameRegister = this.GameRegister.Clone().ToList()};
 }
-
-

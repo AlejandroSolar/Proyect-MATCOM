@@ -19,23 +19,8 @@ public class DrunkStrategy : RandomStrategy
         // recorre la mano del jugador.
         foreach (var piece in hand)
         {
-            // indica si hay alguna jugada posible con la ficha actual de la mano.
-            bool contains = false;
-
-            // recorre la lista de posibles.
-            foreach (var move in possibles)
-            {
-                // Si hay una jugada posible con esta ficha.
-                if (piece == move.Piece)
-                {
-                    // se actualiza el bool y se sale de este ciclo.
-                    contains = true;
-                    break;
-                }
-            }
-
             // si no hay ninguna jugada posible con esta ficha
-            if (!contains)
+            if (!possibles.Any(x => x.Piece.Equals(piece)))
             {
                 // añado una jugada con esta ficha (que evidentemente será incorrecta) a newPossibles
                 newPossibles.Add(new Move(piece, Move.Position.left, false));
@@ -54,8 +39,5 @@ public class DrunkStrategy : RandomStrategy
     }
 
     // representación en string del tipo de estrategia.
-    public override string ToString()
-    {
-        return "Jugador Borracho";
-    }
+    public override string ToString() => "Jugador Borracho";
 }

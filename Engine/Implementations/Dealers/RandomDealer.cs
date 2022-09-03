@@ -25,10 +25,7 @@ public class RandomDealer : IDealer
             }
         }
     }
-    
+
     // representación en string del tipo de repartidor.
-    public override string ToString()
-    {
-        return "Repartidor random";
-    }
+    public override string ToString() => "Repartidor random";
 }

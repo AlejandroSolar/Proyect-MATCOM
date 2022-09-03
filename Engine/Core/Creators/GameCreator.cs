@@ -65,7 +65,7 @@ public static class GameCreator
         }
 
         // almacena instancias de cada uno de los juegos por defecto a travez de la colección de tipos de juegos por defecto.
-        IList<IDefaultGames> defaultOptions = Reflection<IDefaultGames>.ListCreator(DefaultOptions);
+        IList<IDefaultGames> defaultOptions = Reflection<IDefaultGames>.CollectionCreator(DefaultOptions).ToList();
 
         // verifica que los juegos por defecto implementados sean válidos.
         var validDefaultGames = from x in defaultOptions where DoublesAndMax(x.MaxDouble, x.HandCapacity, players.Count()) select x;
@@ -132,7 +132,7 @@ public static class GameCreator
             }
 
             // el usuario selecciona el repartidor de fichas del juego.
-            dealer = Auxiliar<IDealer>.Selector("Elija el repartidor de fichas de la partida", Reflection<IDealer>.ListCreator(Dealers));
+            dealer = Auxiliar<IDealer>.Selector("Elija el repartidor de fichas de la partida", Reflection<IDealer>.CollectionCreator(Dealers));
         }
 
         // devuelve una instancia del juego con las configuraciones dadas.
@@ -177,7 +177,7 @@ public static class GameCreator
     /// <param name="players"> jugadores que van a participar en el juego. </param>
     private static IEnumerable<Couple> CreateCouples(IEnumerable<Player> players)
     {
-        
+        // colección que se va a retornar.
         IList<Couple> forReturn = new List<Couple>();
 
         // crea una nueva lista con los mismos jugadores para que no modifique el parametro players.

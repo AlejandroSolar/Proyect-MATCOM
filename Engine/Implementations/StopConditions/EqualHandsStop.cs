@@ -21,8 +21,5 @@ public class EqualHandsStop : IStopCondition
     }
 
     // representación en string del tipo de condición de parada.
-    public override string ToString()
-    {
-        return "Parada por igualdad de puntos";
-    }
+    public override string ToString() => "Parada por igualdad de puntos";
 }

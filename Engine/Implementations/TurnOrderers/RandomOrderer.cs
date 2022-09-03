@@ -34,8 +34,5 @@ public class RandomOrderer : ITurnOrderer
     }
 
     // representación en string del tipo de ordenador de turnos.
-    public override string ToString()
-    {
-        return "Ordenador de turnos aleatorios";
-    }
+    public override string ToString() => "Ordenador de turnos aleatorios";
 }

@@ -13,8 +13,5 @@ public class LowerPointsWin : IWinCondition
     }
 
     // representación en string del tipo de condición de victoria.
-    public override string ToString()
-    {
-        return "Victoria por Menor cantidad de puntos";
-    }
+    public override string ToString() => "Victoria por Menor cantidad de puntos";
 }

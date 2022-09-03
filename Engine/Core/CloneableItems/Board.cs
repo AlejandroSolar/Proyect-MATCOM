@@ -12,50 +12,33 @@ public class Board : ICloneable<Board>
     private IList<Piece> Table { get; set; }
 
     /// <value> <c>Value</c> representa el valor total y actual en la mesa (suma del valor de las fichas jugadas). </value>
-    public int Value { get { return GetValue(); } }
+    public int Value { get => Table.Sum(x => x.PieceValue); }
 
     /// <value> <c>Count</c> representa la cantidad de fichas colocadas actualmente en la mesa. </value>
-    public int Count { get { return Table.Count; } }
+    public int Count { get => Table.Count; }
 
     /// <value> <c>LeftPiece</c> accede directamente a la ficha colocada a la izquierda de la mesa. </value>
-    public Piece LeftPiece { get { return Table.First(); } }
+    public Piece LeftPiece { get => Table.First(); }
 
     /// <value> <c>RightPiece</c> accede directamente a la ficha colocada a la derecha de la mesa. </value>
-    public Piece RightPiece { get { return Table.Last(); } }
+    public Piece RightPiece { get => Table.Last(); }
 
     /// <summary>
     /// Este constructor inicia una nueva mesa vacía
     /// </summary>
-    public Board()
-    {
-        this.Table = new List<Piece>();
-    }
-
-    /// <summary>
-    /// Calcula el valor actual de la mesa
-    /// </summary>
-    /// <returns>
-    /// Un <typeparamref name="int"/> con el valor actual de la mesa.
-    /// </returns>
-    private int GetValue() => Table.Sum(x => x.PieceValue);
+    public Board() => this.Table = new List<Piece>();
 
     /// <summary>
     /// Coloca una ficha a la derecha de la mesa.
     /// </summary>
     /// <param name="piece"> pieza que se debe colocar </param>
-    public void Add(Piece piece)
-    {
-        Table.Add(piece);
-    }
+    public void Add(Piece piece) => Table.Add(piece);
 
     /// <summary>
     /// Coloca una ficha a la izquierda de la mesa.
     /// </summary>
     /// <param name="piece"> pieza que se debe colocar </param>
-    public void PreAdd(Piece piece)
-    {
-        Table.Insert(0, piece);
-    }
+    public void PreAdd(Piece piece) => Table.Insert(0, piece);
 
     /// <summary>
     /// Crea un clon del estado actual de la mesa.
@@ -63,12 +46,7 @@ public class Board : ICloneable<Board>
     /// <returns>
     /// Una nueva mesa con copias de cada una de las fichas colocadas en la mesa original.
     /// </returns>
-    public Board Clone()
-    {
-        Board clone = new Board();
-        clone.Table = this.Table.Clone().ToList();
-        return clone;
-    }
+    public Board Clone() => new Board() { Table = this.Table.Clone().ToList() };
 
     /// <summary>
     /// Representa gráficamente de la mesa.

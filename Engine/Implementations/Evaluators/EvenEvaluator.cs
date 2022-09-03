@@ -18,8 +18,5 @@ public class EvenEvaluator : IEvaluator
     }
 
     // representación en string del tipo de evaluador.
-    public override string ToString()
-    {
-        return "Evaluador de Pares";
-    }
+    public override string ToString() => "Evaluador de Pares";
 }

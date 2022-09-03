@@ -29,9 +29,7 @@ public class HigherDealer : IDealer
                 box.Remove(organizedBox[0]);
                 organizedBox.RemoveAt(0);
             }         
-        }
-
-        
+        }    
     }
 
     /// <summary>
@@ -75,9 +73,5 @@ public class HigherDealer : IDealer
     }
 
     // representación en string del tipo de repartidor.
-    public override string ToString()
-    {
-        return "Repartidor de tope";
-    }
+    public override string ToString() => "Repartidor de tope";
 }
-

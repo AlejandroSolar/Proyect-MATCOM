@@ -41,8 +41,5 @@ public class HigherValueValid : IValid
     }
 
     // representación en string del tipo de regla.
-    public override string ToString()
-    {
-        return "Regla de mayor valor";
-    }
+    public override string ToString() => "Regla de mayor valor";
 }
