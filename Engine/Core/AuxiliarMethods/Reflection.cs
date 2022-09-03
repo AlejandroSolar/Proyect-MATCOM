@@ -22,7 +22,7 @@ public static class Reflection<T>
     /// </summary>
     /// <param name="types"> colección de tipos a instanciar. </param>
     /// <returns>
-    /// Una <typeparamref name="IList"/> con instancias de cada tipo en la colección recibida.
+    /// Un <typeparamref name="IEnumerable"/> con instancias de cada tipo en la colección recibida.
     /// </returns>
     public static IEnumerable<T> CollectionCreator(IEnumerable<Type> types) => types.Select(type => DefaultInstanceCreator(type));
 
