@@ -64,7 +64,7 @@ public class Player : ICloneable<Player>
     /// <summary>
     /// Representa gráficamente el estado actual de la mano.
     /// </summary>
-    public void PrintHand() => Hand.ToList().ForEach(x => Console.WriteLine(x.ToString()));
+    public void PrintHand() => Hand.ToList().ForEach(x => Console.Write(x.ToString() + " "));
 
     /// <summary>
     /// Crea un clon del jugador.
